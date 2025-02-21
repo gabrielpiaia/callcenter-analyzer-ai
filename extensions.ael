@@ -1,0 +1,17 @@
+context entrante {
+    _X. => {
+        Answer();
+        ;envia a chamada entrante para a fila do suporte
+        Queue(suporte,t);
+        Hangup();
+    };
+};
+
+context sainte {
+    _X. => {
+        Answer();
+        Dial(SIP/8562/${EXTEN},30);  // Usa o peer 8562 para encaminhar o número discado
+        Hangup();
+    };
+};
+

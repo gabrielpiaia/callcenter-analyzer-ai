@@ -1,0 +1,67 @@
+carregar modulo SIP:
+module load chan_sip.so
+
+carregar configurações:
+sip reload
+
+
+
+carregar filas e dialplan:
+asterisk -rx "dialplan reload"
+
+
+
+queue show suporte
+
+
+asterisk -rx "ael reload"
+asterisk -rx "sip reload"
+
+
+
+module reload app_queue.so
+
+
+COMANDOS filas
+queue show
+queue show nome_da_fila
+
+
+
+
+
+Para gravar as chamadas usando o Monitor, você pode adicionar no seu dialplan (ou no contexto AEL) a configuração que chama o aplicativo Monitor para criar arquivos separados para cada canal (separando agente e cliente). Veja um exemplo prático utilizando AEL:
+context sainte {
+    _X. => {
+        Answer();
+        // Cria um nome de arquivo único baseado na data, no CallerID e na extensão
+        Set(CALLFILENAME=${STRFTIME(${EPOCH},,%Y%m%d-%H%M%S)}-${CALLERID(num)}-${EXTEN});
+        // Inicia a gravação separada dos canais (opção "b" grava canais in e out em arquivos distintos)
+        Monitor(wav, /var/spool/asterisk/monitor/${CALLFILENAME}, b);
+        Dial(SIP/8562/${EXTEN},30);
+        Hangup();
+    };
+};
+Explicação dos comandos:
+Answer();
+Atende a chamada.
+
+Set(CALLFILENAME=...);
+Cria uma variável com um nome único para o arquivo de gravação, usando a data/hora, o número do chamador e a extensão.
+
+Monitor(wav, /var/spool/asterisk/monitor/${CALLFILENAME}, b);
+Inicia a gravação da chamada:
+
+wav: Define o formato do áudio.
+/var/spool/asterisk/monitor/${CALLFILENAME}: Caminho e nome base do arquivo.
+b: Opção para gravar os dois lados da chamada separadamente (gerando, por exemplo, arquivos com sufixos -in.wav e -out.wav).
+Dial(SIP/8562/${EXTEN},30);
+Encaminha a chamada para o tronco 8562 utilizando o número discado, com timeout de 30 segundos.
+
+Hangup();
+Encerra a chamada.
+
+
+mkdir -p /var/spool/asterisk/monitor
+chown asterisk:asterisk /var/spool/asterisk/monitor
+chmod 755 /var/spool/asterisk/monitor
