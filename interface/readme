@@ -1,0 +1,33 @@
+
+$2y$10$lwYHbvneeZNux8aseF3oeeQjmD78qpZm15ASpRlCskJr4Mw9cLNoG
+
+ntainer_name: call_analyzer_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password123
+      MYSQL_DATABASE: call_analyzer
+      MYSQL_USER: call_user
+      MYSQL_PASSWORD: call_pass
+    ports:
+
+
+
+php -S localhost:8000
+
+
+INSERT INTO usuarios (nome, email, senha, nivel)
+VALUES ('Gabriel', 'gabriel@gabriel.com', '$2y$10$E1uB2Y8f1JiM6B2MvOc5Nuv9mT6HGX/W9TxktzHo3qYHw5Hx6D3Ae', 'adm');
+
+
+sudo apt-get install php-mysqli
+
+
+
+INSERT INTO usuarios (nome, email, senha, nivel)
+VALUES ('Gabriel', 'gabriel@gabriel.com', '$2y$10$rttmIgEb0sqb3Ql8aCVq0eaRIrN0QaaklsQ3Vy2qMbAnt0O3agHQW', 'adm');
+
+
+
+<?php
+echo password_hash('senha123', PASSWORD_DEFAULT);
+?>

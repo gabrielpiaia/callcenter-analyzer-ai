@@ -1,0 +1,47 @@
+{
+  "transcricao": [
+    { "A": "Bom dia, falo com o senhor Henrique?" },
+    { "B": "Sim, sou eu. Quem está falando?" },
+    { "A": "Meu nome é Juliana, consultora da MaxFibra. Estou entrando em contato para apresentar uma condição exclusiva de internet empresarial disponível para sua região." },
+    { "B": "Ah, não tenho muito tempo agora não." },
+    { "A": "Entendo, serei bem objetiva. Trabalhamos com links dedicados e simétricos, com garantia de SLA e suporte prioritário. É algo que faz sentido para o seu negócio?" },
+    { "B": "Depende. Eu já tenho internet aqui e funciona bem." },
+    { "A": "Claro, mas atualmente o senhor consegue atendimento técnico rápido e estabilidade garantida por contrato?" },
+    { "B": "Olha... nem sempre. Quando cai, às vezes demora." },
+    { "A": "É justamente aí que podemos ajudar. Oferecemos monitoramento 24h, suporte imediato e nossa equipe técnica instala sem custo em até 48h." },
+    { "B": "Tá, mas e o valor disso?" },
+    { "A": "Temos um plano empresarial de 500Mbps dedicado por R$ 329 mensais, com IP fixo incluso. E esse valor é garantido por 12 meses." },
+    { "B": "Hmm... até que não tá ruim." },
+    { "A": "Se o senhor quiser, podemos agendar uma visita técnica sem compromisso para avaliação no local. Que tal essa semana ainda?" },
+    { "B": "Pode ser na sexta à tarde?" },
+    { "A": "Perfeito! Ficou agendado para sexta, às 14h. Nosso técnico irá até aí e explicará todos os detalhes." },
+    { "B": "Tá certo então. Obrigado." },
+    { "A": "Eu que agradeço. Qualquer dúvida, estou à disposição. Tenha um ótimo dia!" }
+  ],
+  "analise_IA": {
+    "resumo_geral": "A ligação foi bem conduzida e resultou no agendamento de uma visita técnica, o que representa uma boa qualificação de lead. A abordagem foi respeitosa diante da objeção inicial de tempo e conseguiu apresentar valor de forma eficiente.",
+    "pontos_fortes": [
+      "Abordagem educada e objetiva logo no início da chamada.",
+      "A vendedora reconheceu a objeção de tempo e adaptou o discurso sem pressão.",
+      "Apresentação clara dos diferenciais do serviço: SLA, suporte 24h, IP fixo e agendamento rápido.",
+      "Conseguiu transformar uma objeção em oportunidade (instabilidade do provedor atual)."
+    ],
+    "pontos_de_melhoria": [
+      "Poderia ter explorado mais o impacto da instabilidade atual na operação da empresa do cliente.",
+      "Faltou perguntar qual é o atual plano do cliente para estabelecer comparação direta.",
+      "A empolgação do cliente foi neutra — seria interessante confirmar se há decisão compartilhada (ex: sócio, gerente de TI etc.)."
+    ],
+    "indicadores_comportamentais": {
+      "tempo_de_ligacao": "2m30s",
+      "niveis_de_engajamento_cliente": "Médio",
+      "resistência_inicial": "Sim",
+      "respostas_automatizadas_do_cliente": "3",
+      "momento_de_quebra_de_objeção": "Quando relatou demora no suporte do provedor atual"
+    },
+    "recomendacoes": [
+      "Encaminhar mensagem de confirmação do agendamento por WhatsApp ainda hoje.",
+      "Preparar técnico com dados personalizados para mostrar comparativo real com plano atual do cliente.",
+      "Fazer follow-up após a visita com base nos argumentos mencionados na ligação."
+    ]
+  }
+}
