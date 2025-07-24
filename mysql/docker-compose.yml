@@ -8,7 +8,7 @@ services:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: gabriel123!@#
-      MYSQL_DATABASE: mydatabase
+      MYSQL_DATABASE: sistema
       MYSQL_USER: gabriel
       MYSQL_PASSWORD: gabriel123!@#
     restart: always

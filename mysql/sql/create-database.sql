@@ -3,6 +3,8 @@
 -- Criação de um banco de dados de exemplo
 CREATE DATABASE IF NOT EXISTS database_site;
 
+CREATE DATABASE sistema;
+
 -- Uso do banco de dados criado
 USE database_site;
 
